@@ -5,79 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VTL Autowerks | Premium Auto Detailing</title>
     
-    <!-- Tailwind CSS (Styling) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* === ANIMATION STYLES FOR COMING SOON TEXT === */
-.coming-soon-animated {
-    /* Positioning & Look */
-  /* 1. NEW WRAPPER CSS - This centers the text block */
-.hero-text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    width: 100%;
-}
-
-/* 2. UPDATED H1 CSS - Cleaned up to rely on the wrapper */
-.coming-soon-animated {
-    font-size: 6em; 
-    font-weight: 900;
-    color: #FFD700; 
-    letter-spacing: 5px;
-    z-index: 5;
-    margin-bottom: 5px; /* Add small space below H1 */
-    animation: pulse-glow 2s infinite alternate;
-}
-
-/* 3. UPDATED H2 CSS - Now that it's in the wrapper, it stacks perfectly */
-.hero-subtitle-fix {
-    font-size: 1.4em; 
-    color: #DDDDDD;
-    letter-spacing: 3px;
-    text-align: center;
-    margin-top: 0; 
-    z-index: 5;
-}
-    font-size: 6em; 
-    font-weight: 900;
-    color: #FFD700; /* Bright Gold */
-    letter-spacing: 5px;
-    z-index: 5; /* Ensure it appears over the car image */
-
-    /* Animation: 2s duration, repeats infinitely, alternates */
-    animation: pulse-glow 2s infinite alternate;
-}
-
-/* KEYFRAMES: Defines the subtle pulsing/glowing effect */
-@keyframes pulse-glow {
-    0% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-        /* Subtle glow */
-        text-shadow: 0 0 10px #FFD700, 0 0 20px rgba(255, 215, 0, 0.5); 
-    }
-    100% {
-        opacity: 0.8;
-        transform: translate(-50%, -50%) scale(1.02);
-        /* Stronger glow */
-        text-shadow: 0 0 15px #FFD700, 0 0 30px rgba(255, 215, 0, 0.8);
-    }
-}
         body { font-family: 'Montserrat', sans-serif; }
         
+        /* === HERO TEXT POSITIONING === */
+        
+        /* 1. WRAPPER: Centers the text block and pushes it slightly up */
+        .hero-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 45%; /* Adjusted to center nicely above buttons */
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            width: 100%;
+            z-index: 20;
+            pointer-events: none; /* Lets you click through text if needed */
+        }
+
+        /* 2. COMING SOON TEXT: The animation */
+        .coming-soon-animated {
+            font-size: 3.5em; /* Smaller starting size for mobile phones */
+            font-weight: 900;
+            color: #FFD700; 
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 1.1;
+            
+            /* Animation */
+            animation: pulse-glow 2s infinite alternate;
+        }
+
+        /* Responsive Size for Tablets and Desktops */
+        @media (min-width: 768px) {
+            .coming-soon-animated {
+                font-size: 6em;
+                letter-spacing: 5px;
+            }
+        }
+
+        /* 3. SUBTITLE: The text below */
+        .hero-subtitle-fix {
+            font-size: 0.9em; /* Smaller for mobile */
+            color: #DDDDDD;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-top: 0; 
+            text-transform: uppercase;
+        }
+
+        @media (min-width: 768px) {
+            .hero-subtitle-fix {
+                font-size: 1.4em;
+                letter-spacing: 3px;
+            }
+        }
+
+        /* KEYFRAMES: The Glow Effect */
+        @keyframes pulse-glow {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+                text-shadow: 0 0 10px #FFD700, 0 0 20px rgba(255, 215, 0, 0.5); 
+            }
+            100% {
+                opacity: 0.8;
+                transform: scale(1.02);
+                text-shadow: 0 0 15px #FFD700, 0 0 30px rgba(255, 215, 0, 0.8);
+            }
+        }
+
         /* Custom Gold Gradient Definitions */
         .text-gold-gradient {
             background-clip: text;
@@ -107,16 +113,13 @@
 </head>
 <body class="bg-neutral-950 text-white selection:bg-[#C69C6D] selection:text-black">
 
-    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
         <div class="container mx-auto px-6 flex justify-between items-center">
             
-            <!-- Text Logo -->
             <div class="text-2xl font-bold tracking-wider cursor-pointer group" onclick="document.getElementById('hero').scrollIntoView()">
                 <span class="text-gold-gradient">VTL</span> <span class="text-white group-hover:text-[#C69C6D] transition-colors">AUTOWERKS</span>
             </div>
 
-            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
                 <button onclick="document.getElementById('services').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Services</button>
                 <button onclick="document.getElementById('gallery').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Gallery</button>
@@ -128,13 +131,11 @@
                 </button>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button class="md:hidden text-white hover:text-[#C69C6D] transition-colors" onclick="toggleMenu()">
                 <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
         </div>
 
-        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-black border-t border-white/10 shadow-2xl flex flex-col items-center py-4 space-y-4 md:hidden">
             <button onclick="toggleMenu(); document.getElementById('services').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">Services</button>
             <button onclick="toggleMenu(); document.getElementById('gallery').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">Gallery</button>
@@ -143,7 +144,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=2940&auto=format&fit=crop" class="w-full h-full object-cover opacity-30" alt="Background">
@@ -160,11 +160,11 @@
                 AUTOMOTIVE PAINT PROTECTION & DETAILING
             </h2>
 
-            <div class="flex flex-col md:flex-row gap-4 justify-center mt-8">
-                <button onclick="document.getElementById('contact').scrollIntoView()" class="bg-gold-gradient text-black px-8 py-4 font-bold uppercase tracking-wider hover:brightness-110 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(198,156,109,0.3)] pointer-events-auto">
+            <div class="flex flex-col md:flex-row gap-4 justify-center mt-8 pointer-events-auto">
+                <button onclick="document.getElementById('contact').scrollIntoView()" class="bg-gold-gradient text-black px-8 py-4 font-bold uppercase tracking-wider hover:brightness-110 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(198,156,109,0.3)]">
                     Get a Quote
                 </button>
-                <button onclick="document.getElementById('services').scrollIntoView()" class="px-8 py-4 border border-white/30 hover:bg-white/10 transition-all uppercase tracking-wider font-bold backdrop-blur-sm pointer-events-auto">
+                <button onclick="document.getElementById('services').scrollIntoView()" class="px-8 py-4 border border-white/30 hover:bg-white/10 transition-all uppercase tracking-wider font-bold backdrop-blur-sm">
                     Our Services
                 </button>
             </div>
@@ -172,7 +172,6 @@
         </div> 
     </section>
 
-    <!-- Features Strip -->
     <div class="bg-neutral-900 border-y border-white/5 py-8 relative z-20">
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
             <div class="p-4">
@@ -190,7 +189,6 @@
         </div>
     </div>
 
-    <!-- Services Section -->
     <section id="services" class="py-24 bg-neutral-950">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -199,7 +197,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
                 <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2 relative overflow-hidden">
                     <div class="mb-6 inline-block p-4 rounded-full bg-black border border-[#C69C6D]/30 group-hover:border-[#C69C6D] transition-colors">
                         <i data-lucide="sparkles" class="text-[#C69C6D] w-8 h-8"></i>
@@ -212,8 +209,7 @@
                     </ul>
                 </div>
 
-                <!-- Service 2 -->
-              <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2 relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-[#C69C6D] text-black text-xs font-bold px-3 py-1 uppercase">Most Popular</div>
                     <div class="mb-6 inline-block p-4 rounded-full bg-black border border-[#C69C6D]/30 group-hover:border-[#C69C6D] transition-colors">
                         <i data-lucide="shield" class="text-[#C69C6D] w-8 h-8"></i>
@@ -225,7 +221,6 @@
                         <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Extreme Gloss</li>
                     </ul>
                 </div>
-                <!-- Service 3 -->
                 <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2">
                     <div class="mb-6 inline-block p-4 rounded-full bg-black border border-[#C69C6D]/30 group-hover:border-[#C69C6D] transition-colors">
                         <i data-lucide="droplets" class="text-[#C69C6D] w-8 h-8"></i>
@@ -241,7 +236,6 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
     <section id="gallery" class="py-24 bg-black">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
@@ -268,9 +262,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-24 bg-neutral-950 relative overflow-hidden">
-        <!-- Decorative Glow -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C69C6D] rounded-full filter blur-[120px] opacity-10 pointer-events-none"></div>
 
         <div class="container mx-auto px-6 relative z-10">
@@ -281,7 +273,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Contact Info -->
                     <div class="space-y-8">
                         <div class="flex items-start">
                             <div class="p-3 bg-black border border-[#C69C6D]/30 rounded text-[#C69C6D]">
@@ -312,54 +303,43 @@
                         </div>
                     </div>
 
-                    <!-- Form -->
                     <form action="https://formsubmit.co/vtlautowerks@gmail.com" method="POST" class="space-y-6">
-    <!-- Email Settings -->
-    <input type="hidden" name="_subject" value="New Quote Request - VTL Autowerks">
-    <input type="hidden" name="_next" value="https://cheery-entremet-0b5ce8.netlify.app/thanks.html">
-    <!-- (Change the link above to your .com link later!) -->
+                        <input type="hidden" name="_subject" value="New Quote Request - VTL Autowerks">
+                        <input type="hidden" name="_next" value="https://cheery-entremet-0b5ce8.netlify.app/thanks.html">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-wider text-gray-500">Name</label>
+                                <input type="text" name="name" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="John Doe" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-wider text-gray-500">Phone</label>
+                                <input type="tel" name="phone" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="(555) 000-0000" required>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-wider text-gray-500">Vehicle Make/Model</label>
+                            <input type="text" name="vehicle" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="e.g. BMW M3" required>
+                        </div>
 
-    <div class="grid grid-cols-2 gap-6">
-        <div class="space-y-2">
-            <label class="text-xs uppercase tracking-wider text-gray-500">Name</label>
-            <!-- Added name="name" below -->
-            <input type="text" name="name" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="John Doe" required>
-        </div>
-        <div class="space-y-2">
-            <label class="text-xs uppercase tracking-wider text-gray-500">Phone</label>
-            <!-- Added name="phone" below -->
-            <input type="tel" name="phone" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="(555) 000-0000" required>
-        </div>
-    </div>
-    
-    <div class="space-y-2">
-        <label class="text-xs uppercase tracking-wider text-gray-500">Vehicle Make/Model</label>
-        <!-- Added name="vehicle" below -->
-        <input type="text" name="vehicle" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="e.g. BMW M3" required>
-    </div>
-
-    <button class="w-full bg-gold-gradient text-black font-bold uppercase tracking-wider py-4 mt-4 hover:brightness-110 transition-all">
-        Request Booking
-    </button>
-</form>
+                        <button class="w-full bg-gold-gradient text-black font-bold uppercase tracking-wider py-4 mt-4 hover:brightness-110 transition-all">
+                            Request Booking
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-black py-12 border-t border-white/10">
         <div class="container mx-auto px-6 text-center">
-            <!-- Footer Logo Placeholder -->
             <div class="flex justify-center mb-6">
-                <img src="logo.png" alt="VTL Autowerks Logo" class="...">
+                <span class="text-gold-gradient text-2xl font-bold">VTL AUTOWERKS</span>
             </div>
             <p class="text-gray-600 text-sm">© 2024 VTL Autowerks LLC. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Script to Initialize Icons and Interactions -->
     <script>
         // Initialize Icons
         lucide.createIcons();
