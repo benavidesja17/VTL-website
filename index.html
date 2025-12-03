@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTL Autowerks | Premium Auto Detailing</title>
+    
+    <!-- Tailwind CSS (Styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        
+        /* Custom Gold Gradient Definitions */
+        .text-gold-gradient {
+            background: linear-gradient(to right, #F2D088, #C69C6D, #8B6D43);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(to right, #C69C6D, #8B6D43);
+        }
+        
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Mobile Menu Transitions */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 400px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-neutral-950 text-white selection:bg-[#C69C6D] selection:text-black">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            
+            <!-- Text Logo -->
+            <div class="text-2xl font-bold tracking-wider cursor-pointer group" onclick="document.getElementById('hero').scrollIntoView()">
+                <span class="text-gold-gradient">VTL</span> <span class="text-white group-hover:text-[#C69C6D] transition-colors">AUTOWERKS</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <button onclick="document.getElementById('services').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Services</button>
+                <button onclick="document.getElementById('gallery').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Gallery</button>
+                <button onclick="document.getElementById('about').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">About</button>
+                <button onclick="document.getElementById('contact').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Contact</button>
+                
+                <button onclick="document.getElementById('contact').scrollIntoView()" class="px-6 py-2 border border-[#C69C6D] text-[#C69C6D] hover:bg-[#C69C6D] hover:text-black transition-all duration-300 uppercase text-sm tracking-wider font-bold">
+                    Book Now
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white hover:text-[#C69C6D] transition-colors" onclick="toggleMenu()">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-black border-t border-white/10 shadow-2xl flex flex-col items-center py-4 space-y-4 md:hidden">
+            <button onclick="toggleMenu(); document.getElementById('services').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">Services</button>
+            <button onclick="toggleMenu(); document.getElementById('gallery').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">Gallery</button>
+            <button onclick="toggleMenu(); document.getElementById('about').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">About</button>
+            <button onclick="toggleMenu(); document.getElementById('contact').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">Contact</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=2940&auto=format&fit=crop" class="w-full h-full object-cover opacity-30" alt="Background">
+            <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-neutral-950/40 to-neutral-950"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto mt-12">
+            <!-- LOGO PLACEHOLDER: Replace src with your actual logo file (e.g. 'IMG_9878.jpeg') -->
+            <div class="mb-8 flex justify-center">
+                <img src="logo.png" alt="VTL Autowerks Logo" class="...">
+            </div>
+
+            <h2 class="text-xl md:text-2xl font-light tracking-[0.2em] text-gray-300 mb-8 uppercase">Automotive Paint Protection & Detailing</h2>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <button onclick="document.getElementById('contact').scrollIntoView()" class="bg-gold-gradient text-black px-8 py-4 font-bold uppercase tracking-wider hover:brightness-110 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(198,156,109,0.3)]">
+                    Get a Quote
+                </button>
+                <button onclick="document.getElementById('services').scrollIntoView()" class="px-8 py-4 border border-white/30 hover:bg-white/10 transition-all uppercase tracking-wider font-bold backdrop-blur-sm">
+                    Our Services
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Strip -->
+    <div class="bg-neutral-900 border-y border-white/5 py-8 relative z-20">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+            <div class="p-4">
+                <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Hydrophobic Protection</h3>
+                <p class="text-gray-500 text-sm">Advanced ceramic technology for extreme water beading.</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Mirror Finish</h3>
+                <p class="text-gray-500 text-sm">Multi-stage paint correction to remove swirls and scratches.</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Interior Restoration</h3>
+                <p class="text-gray-500 text-sm">Deep cleaning and leather conditioning for a like-new feel.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-neutral-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">OUR <span class="text-gold-gradient">EXPERTISE</span></h2>
+                <div class="h-1 w-24 bg-[#C69C6D] mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2 relative overflow-hidden">
+                    <div class="mb-6 inline-block p-4 rounded-full bg-black border border-[#C69C6D]/30 group-hover:border-[#C69C6D] transition-colors">
+                        <i data-lucide="sparkles" class="text-[#C69C6D] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Paint Correction</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">We remove swirl marks, scratches, and oxidation to reveal the true depth of your paint.</p>
+                    <ul class="space-y-2 mb-8 text-sm text-gray-500">
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Swirl Removal</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Scratch Repair</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+              <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-[#C69C6D] text-black text-xs font-bold px-3 py-1 uppercase">Most Popular</div>
+                    <div class="mb-6 inline-block p-4 rounded-full bg-black border border-[#C69C6D]/30 group-hover:border-[#C69C6D] transition-colors">
+                        <i data-lucide="shield" class="text-[#C69C6D] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Ceramic Coating</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Long-term protection against UV rays, bird droppings, and chemical stains. Unmatched gloss.</p>
+                    <ul class="space-y-2 mb-8 text-sm text-gray-500">
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> 3-5 Year Protection</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Extreme Gloss</li>
+                    </ul>
+                </div>
+                <!-- Service 3 -->
+                <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                    <div class="mb-6 inline-block p-4 rounded-full bg-black border border-[#C69C6D]/30 group-hover:border-[#C69C6D] transition-colors">
+                        <i data-lucide="droplets" class="text-[#C69C6D] w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Full Detail</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">A comprehensive reset. Deep interior cleaning, leather conditioning, and a premium wash.</p>
+                    <ul class="space-y-2 mb-8 text-sm text-gray-500">
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Steam Cleaning</li>
+                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Leather Care</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-2">RECENT <span class="text-gold-gradient">WORKS</span></h2>
+                    <p class="text-gray-500">See the difference precision makes.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="relative group overflow-hidden h-64 md:h-80 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2944&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                </div>
+                <div class="relative group overflow-hidden h-64 md:h-80 cursor-pointer lg:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2898&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                </div>
+                <div class="relative group overflow-hidden h-64 md:h-80 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2940&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                </div>
+                <div class="relative group overflow-hidden h-64 md:h-80 cursor-pointer lg:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1600705722908-bab1e61c0b4d?q=80&w=2946&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-neutral-950 relative overflow-hidden">
+        <!-- Decorative Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C69C6D] rounded-full filter blur-[120px] opacity-10 pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto bg-neutral-900 border border-white/5 p-8 md:p-12 rounded-lg shadow-2xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">READY TO <span class="text-gold-gradient">TRANSFORM</span> YOUR RIDE?</h2>
+                    <p class="text-gray-400">Fill out the form below or give us a call.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-black border border-[#C69C6D]/30 rounded text-[#C69C6D]">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-white font-bold">Phone</h4>
+                                <p class="text-gray-400">(571) 439-1855</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="p-3 bg-black border border-[#C69C6D]/30 rounded text-[#C69C6D]">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-white font-bold">Email</h4>
+                                <p class="text-gray-400">vtlautowerks@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="p-3 bg-black border border-[#C69C6D]/30 rounded text-[#C69C6D]">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-white font-bold">Location</h4>
+                                <p class="text-gray-400">1531 Fort Sumter Ct, Dumfries, VA </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <form action="https://formsubmit.co/vtlautowerks@gmail.com" method="POST" class="space-y-6">
+    <!-- Email Settings -->
+    <input type="hidden" name="_subject" value="New Quote Request - VTL Autowerks">
+    <input type="hidden" name="_next" value="https://cheery-entremet-0b5ce8.netlify.app/thanks.html">
+    <!-- (Change the link above to your .com link later!) -->
+
+    <div class="grid grid-cols-2 gap-6">
+        <div class="space-y-2">
+            <label class="text-xs uppercase tracking-wider text-gray-500">Name</label>
+            <!-- Added name="name" below -->
+            <input type="text" name="name" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="John Doe" required>
+        </div>
+        <div class="space-y-2">
+            <label class="text-xs uppercase tracking-wider text-gray-500">Phone</label>
+            <!-- Added name="phone" below -->
+            <input type="tel" name="phone" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="(555) 000-0000" required>
+        </div>
+    </div>
+    
+    <div class="space-y-2">
+        <label class="text-xs uppercase tracking-wider text-gray-500">Vehicle Make/Model</label>
+        <!-- Added name="vehicle" below -->
+        <input type="text" name="vehicle" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="e.g. BMW M3" required>
+    </div>
+
+    <button class="w-full bg-gold-gradient text-black font-bold uppercase tracking-wider py-4 mt-4 hover:brightness-110 transition-all">
+        Request Booking
+    </button>
+</form>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Footer Logo Placeholder -->
+            <div class="flex justify-center mb-6">
+                <img src="logo.png" alt="VTL Autowerks Logo" class="...">
+            </div>
+            <p class="text-gray-600 text-sm">© 2024 VTL Autowerks LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script to Initialize Icons and Interactions -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/95', 'backdrop-blur-md', 'shadow-lg', 'py-4');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('bg-black/95', 'backdrop-blur-md', 'shadow-lg', 'py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+    </script>
+</body>
+</html>
