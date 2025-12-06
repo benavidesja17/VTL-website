@@ -16,38 +16,41 @@
         
         /* === HERO TEXT POSITIONING === */
         
-        /* 1. WRAPPER: Centers the text block and pushes it slightly up */
+        /* 1. WRAPPER: Centers the text block */
         .hero-text-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             position: absolute;
-            top: 45%; /* Adjusted to center nicely above buttons */
+            top: 45%; 
             left: 50%;
             transform: translate(-50%, -50%); 
             width: 100%;
             z-index: 20;
-            pointer-events: none; /* Lets you click through text if needed */
+            pointer-events: none; 
         }
 
-        /* 2. LOGO STYLING: Replaces the text animation */
+        /* 2. LOGO STYLING */
         .hero-logo {
-            width: 100%;            /* Responsive width */
-            max-width: 800px;       /* Increased max-width to make it bigger */
-            height: auto;           /* Keeps the aspect ratio perfect */
-            margin-bottom: 10px;    /* Reduced margin to bring it closer to the text */
-            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)); /* Helps it pop off background */
+            width: 100%;            
+            max-width: 800px;       
+            height: auto;           
+            /* KEY CHANGE HERE: Negative number pulls the text up */
+            margin-bottom: -50px;    
+            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)); 
         }
 
         /* 3. SUBTITLE: The text below */
         .hero-subtitle-fix {
-            font-size: 0.9em; /* Smaller for mobile */
+            font-size: 0.9em; 
             color: #DDDDDD;
             letter-spacing: 2px;
             text-align: center;
             margin-top: 0; 
             text-transform: uppercase;
+            position: relative; /* Ensures it sits on top if they overlap */
+            z-index: 21;
         }
 
         @media (min-width: 768px) {
@@ -348,29 +351,3 @@
             </div>
             <p class="text-gray-600 text-sm">© 2024 VTL Autowerks LLC. All rights reserved.</p>
         </div>
-    </footer>
-
-    <script>
-        // Initialize Icons
-        lucide.createIcons();
-
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('open');
-        }
-
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-black/95', 'backdrop-blur-md', 'shadow-lg', 'py-4');
-                navbar.classList.remove('py-6');
-            } else {
-                navbar.classList.remove('bg-black/95', 'backdrop-blur-md', 'shadow-lg', 'py-4');
-                navbar.classList.add('py-6');
-            }
-        });
-    </script>
-</body>
-</html>
