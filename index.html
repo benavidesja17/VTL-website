@@ -31,26 +31,13 @@
             pointer-events: none; /* Lets you click through text if needed */
         }
 
-        /* 2. COMING SOON TEXT: The animation */
-        .coming-soon-animated {
-            font-size: 3.5em; /* Smaller starting size for mobile phones */
-            font-weight: 900;
-            color: #f2d088; 
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-align: center;
-            line-height: 1.1;
-            
-            /* Animation */
-            animation: pulse-glow 2s infinite alternate;
-        }
-
-        /* Responsive Size for Tablets and Desktops */
-        @media (min-width: 768px) {
-            .coming-soon-animated {
-                font-size: 6em;
-                letter-spacing: 5px;
-            }
+        /* 2. LOGO STYLING: Replaces the text animation */
+        .hero-logo {
+            width: 100%;            /* Responsive width */
+            max-width: 600px;       /* Stops it from getting too big on PC */
+            height: auto;           /* Keeps the aspect ratio perfect */
+            margin-bottom: 20px;    /* Space between logo and subtitle */
+            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)); /* Helps it pop off background */
         }
 
         /* 3. SUBTITLE: The text below */
@@ -67,20 +54,6 @@
             .hero-subtitle-fix {
                 font-size: 1.4em;
                 letter-spacing: 3px;
-            }
-        }
-
-        /* KEYFRAMES: The Glow Effect */
-        @keyframes pulse-glow {
-            0% {
-                opacity: 1;
-                transform: scale(1);
-                text-shadow: 0 0 10px #FFD700, 0 0 20px rgba(255, 215, 0, 0.5); 
-            }
-            100% {
-                opacity: 0.8;
-                transform: scale(1.02);
-                text-shadow: 0 0 15px #FFD700, 0 0 30px rgba(255, 215, 0, 0.8);
             }
         }
 
@@ -152,9 +125,7 @@
 
         <div class="hero-text-container"> 
             
-            <h1 class="coming-soon-animated">
-                COMING SOON
-            </h1>
+            <img src="logo.png" alt="VTL Autowerks Logo" class="hero-logo">
             
             <h2 class="hero-subtitle-fix">
                 AUTOMOTIVE PAINT PROTECTION & DETAILING
@@ -236,7 +207,7 @@
         </div>
     </section>
 
-<section id="gallery" class="py-24 bg-neutral-950">
+    <section id="gallery" class="py-24 bg-neutral-950">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
                 <div>
@@ -299,7 +270,7 @@
                 </div>
 
             </div>
-    </section>>
+    </section>
 
     <section id="contact" class="py-24 bg-neutral-950 relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C69C6D] rounded-full filter blur-[120px] opacity-10 pointer-events-none"></div>
@@ -370,12 +341,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-black py-12 border-t border-white/10">
         <div class="container mx-auto px-6 text-center">
-            <!-- Footer Logo Placeholder -->
             <div class="flex justify-center mb-6">
-                <img src="logo.png" alt="VTL Autowerks Logo" class="...">
+                <img src="logo.png" alt="VTL Autowerks Logo" class="w-32 mx-auto">
             </div>
             <p class="text-gray-600 text-sm">© 2024 VTL Autowerks LLC. All rights reserved.</p>
         </div>
