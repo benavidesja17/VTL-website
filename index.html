@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VTL Autowerks | Premium Auto Detailing</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="tailwind.min.css" rel="stylesheet">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
     
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide icons are now bundled locally for better performance. Remove CDN script. -->
+    ```
 
     <style>
         body { font-family: 'Montserrat', sans-serif; } 
@@ -217,9 +218,9 @@
                     <h2 class="text-3xl md:text-5xl font-bold mb-2">RECENT <span class="text-gold-gradient">WORK</span></h2>
                     <p class="text-gray-500">Precision. Gloss. Perfection.</p>
                 </div>
-                <button class="hidden md:block text-[#C69C6D] hover:text-white transition-colors uppercase tracking-widest text-sm font-bold mt-4 md:mt-0">
+                <a href="https://www.instagram.com/vtlautowerks" target="_blank" rel="noopener noreferrer" class="hidden md:block text-[#C69C6D] hover:text-white transition-colors uppercase tracking-widest text-sm font-bold mt-4 md:mt-0">
                     Follow us on Instagram <i data-lucide="arrow-right" class="inline w-4 h-4 ml-1"></i>
-                </button>
+                </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -317,7 +318,7 @@
                     </div>
 
                     <form action="https://formsubmit.co/vtlautowerks@gmail.com" method="POST" class="space-y-6">
-                        <input type="hidden" name="_subject" value="New Quote Request - VTL Autowerks">
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
                         <input type="hidden" name="_next" value="https://cheery-entremet-0b5ce8.netlify.app/thanks.html">
                         <div class="grid grid-cols-2 gap-6">
                             <div class="space-y-2">
@@ -347,8 +348,9 @@
         <footer class="bg-black py-12 border-t border-white/10">
             <div class="container mx-auto px-6 text-center">
                 <div class="flex justify-center mb-6">
-                    <img src="logo.png" alt="VTL Autowerks logo featuring gold gradient text on black background, representing premium auto detailing and ceramic coating services" class="w-160 mx-auto">
+                    <img src="logo.png" alt="VTL Autowerks logo featuring gold gradient text on black background, representing premium auto detailing and ceramic coating services" class="w-40 mx-auto">
                 </div>
                 <p class="text-gray-600 text-sm">© 2024 VTL Autowerks LLC. All rights reserved.</p>
             </div>
         </footer>
+</html>   
