@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VTL Autowerks - Premium automotive detailing and ceramic coating in Dumfries, VA.">
     <title>VTL Autowerks | Premium Auto Detailing</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -316,8 +317,12 @@
                         </div>
                     </div>
 
-                    <form action="https://formsubmit.co/REMOVE/DISABLE--2fe3385ded0ed52ffe00fc9abbff9769--" method="POST" class="space-y-6">
-                        <input type="hidden" name="_next" value="https://vtlautowerks.netlify.app/thanks.html">
+                    <form name="booking-request" method="POST" data-netlify="true" action="thank_you.html" class="space-y-6">
+                        
+                        <div hidden>
+                          <input name="bot-field" />
+                        </div>
+
                         <div class="grid grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-xs uppercase tracking-wider text-gray-500">Name</label>
@@ -334,11 +339,11 @@
                             <input type="text" name="vehicle" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="e.g. BMW M3" required>
                         </div>
 
-                        <button class="w-full bg-gold-gradient text-black font-bold uppercase tracking-wider py-4 mt-4 hover:brightness-110 transition-all">
+                        <button type="submit" class="w-full bg-gold-gradient text-black font-bold uppercase tracking-wider py-4 mt-4 hover:brightness-110 transition-all">
                             Request Booking
                         </button>
                     </form>
-                </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -346,8 +351,20 @@
         <footer class="bg-black py-12 border-t border-white/10">
             <div class="container mx-auto px-6 text-center">
                 <div class="flex justify-center mb-6">
-                    <img src="logo.png" alt="VTL Autowerks logo featuring gold gradient text on black background, representing premium auto detailing and ceramic coating services" class="w-125 mx-auto">
+                    <img src="logo.png" alt="VTL Autowerks logo" class="w-125 mx-auto">
                 </div>
                 <p class="text-gray-600 text-sm">© 2024 VTL Autowerks LLC. All rights reserved.</p>
             </div>
         </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        }
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
