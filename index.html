@@ -177,7 +177,7 @@
                         <i data-lucide="sparkles" class="text-[#C69C6D] w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Paint Correction</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">We remove swirl marks, scratches, and oxidation to reveal the true depth of your paint.</p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">removal of swirl marks, scratches, and oxidation to reveal the true depth of your paint.</p>
                     <ul class="space-y-2 mb-8 text-sm text-gray-500">
                         <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Swirl Removal</li>
                         <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Scratch Repair</li>
@@ -213,7 +213,7 @@
 
     <section id="gallery" class="py-24 bg-neutral-950">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 text-center md:text-left">
                 <div>
                     <h2 class="text-3xl md:text-5xl font-bold mb-2">RECENT <span class="text-gold-gradient">WORK</span></h2>
                     <p class="text-gray-500">Precision. Gloss. Perfection.</p>
@@ -280,70 +280,133 @@
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C69C6D] rounded-full filter blur-[120px] opacity-10 pointer-events-none"></div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto bg-neutral-900 border border-white/5 p-8 md:p-12 rounded-lg shadow-2xl">
-                <div class="text-center mb-12">
+            <div class="max-w-3xl mx-auto bg-neutral-900 border border-white/5 p-8 md:p-12 rounded-lg shadow-2xl">
+                
+                <div class="text-center mb-8">
                     <h2 class="text-3xl font-bold mb-4">READY TO <span class="text-gold-gradient">TRANSFORM</span> YOUR RIDE?</h2>
-                    <p class="text-gray-400">Fill out the form below or give us a call.</p>
+                    <p class="text-gray-400">Immediate scheduling? Call or text us directly.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="space-y-8">
-                        <div class="flex items-start">
-                            <div class="p-3 bg-black border border-[#C69C6D]/30 rounded text-[#C69C6D]">
-                                <i data-lucide="phone" class="w-6 h-6"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-white font-bold">Phone</h4>
-                                <p class="text-gray-400">(571) 439-1855</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="p-3 bg-black border border-[#C69C6D]/30 rounded text-[#C69C6D]">
-                                <i data-lucide="mail" class="w-6 h-6"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-white font-bold">Email</h4>
-                                <p class="text-gray-400">vtlautowerks@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="p-3 bg-black border border-[#C69C6D]/30 rounded text-[#C69C6D]">
-                                <i data-lucide="map-pin" class="w-6 h-6"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-white font-bold">Location</h4>
-                                <p class="text-gray-400">1531 Fort Sumter Ct, Dumfries, VA </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <a href="tel:5714391855" class="flex items-center justify-center bg-white text-black font-bold py-4 uppercase tracking-wider hover:bg-gray-200 transition-colors rounded-sm">
+                        <i data-lucide="phone" class="w-5 h-5 mr-2"></i> Call Now
+                    </a>
+                    <a href="sms:5714391855" class="flex items-center justify-center bg-neutral-800 border border-white/20 text-white font-bold py-4 uppercase tracking-wider hover:bg-neutral-700 transition-colors rounded-sm">
+                        <i data-lucide="message-square" class="w-5 h-5 mr-2"></i> Text Us
+                    </a>
+                </div>
 
-                    <form name="booking-request" method="POST" data-netlify="true" action="thank_you.html" class="space-y-6">
-                        
-                        <div hidden>
-                          <input name="bot-field" />
-                        </div>
+                <div class="relative flex py-5 items-center mb-8">
+                    <div class="flex-grow border-t border-white/10"></div>
+                    <span class="flex-shrink-0 mx-4 text-gray-500 text-sm font-bold uppercase tracking-widest">OR</span>
+                    <div class="flex-grow border-t border-white/10"></div>
+                </div>
 
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="text-xs uppercase tracking-wider text-gray-500">Name</label>
-                                <input type="text" name="name" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="John Doe" required>
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-xs uppercase tracking-wider text-gray-500">Phone</label>
-                                <input type="tel" name="phone" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="(555) 000-0000" required>
-                            </div>
-                        </div>
-                        
-                        <div class="space-y-2">
-                            <label class="text-xs uppercase tracking-wider text-gray-500">Vehicle Make/Model</label>
-                            <input type="text" name="vehicle" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none" placeholder="e.g. BMW M3" required>
-                        </div>
+                <div class="text-center mb-8">
+                    <h3 class="text-xl text-white font-semibold">Get A Personalized Quote</h3>
+                    <p class="text-gray-500 text-sm mt-1">Tell us about your vehicle and we'll get back to you shortly.</p>
+                </div>
 
-                        <button type="submit" class="w-full bg-gold-gradient text-black font-bold uppercase tracking-wider py-4 mt-4 hover:brightness-110 transition-all">
-                            Request Booking
-                        </button>
-                    </form>
-                    </div>
+                <form name="booking-request" method="POST" data-netlify="true" action="thank_you.html" class="space-y-6 text-left">
+    
+    <div hidden><input name="bot-field" /></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+            <label class="text-xs uppercase tracking-wider text-gray-500 font-bold">First Name *</label>
+            <input type="text" name="first_name" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none rounded-sm" placeholder="First Name" required>
+        </div>
+        <div class="space-y-2">
+            <label class="text-xs uppercase tracking-wider text-gray-500 font-bold">Last Name *</label>
+            <input type="text" name="last_name" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none rounded-sm" placeholder="Last Name" required>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+            <label class="text-xs uppercase tracking-wider text-gray-500 font-bold">Phone *</label>
+            <input type="tel" name="phone" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none rounded-sm" placeholder="Phone" required>
+        </div>
+        <div class="space-y-2">
+            <label class="text-xs uppercase tracking-wider text-gray-500 font-bold">Email *</label>
+            <input type="email" name="email" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none rounded-sm" placeholder="Email" required>
+        </div>
+    </div>
+    
+    <div class="space-y-2">
+        <label class="text-xs uppercase tracking-wider text-gray-500 font-bold">Vehicle Year, Make, Model *</label>
+        <input type="text" name="vehicle" class="w-full bg-black border border-white/10 p-3 text-white focus:border-[#C69C6D] outline-none rounded-sm" required>
+    </div>
+
+    <div class="pt-4 pb-2">
+        <p class="text-sm text-gray-400 mb-4">Select all that apply:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div>
+                <label class="text-xs uppercase tracking-wider text-[#C69C6D] font-bold mb-3 block border-b border-white/10 pb-2">Exterior Services (Check all that apply)</label>
+                <div class="space-y-3">
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_ceramic" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Ceramic Coating</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_wash" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Premium Wash & Wax</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_clay_decon" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Clay Bar & Paint Decontamination</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_paint_correction" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Paint Correction / Scratch Removal</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_engine" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Engine Cleaning</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_headlights" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Headlight Restoration</span>
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <label class="text-xs uppercase tracking-wider text-[#C69C6D] font-bold mb-3 block border-b border-white/10 pb-2">Interior Services (Check all that apply)</label>
+                <div class="space-y-3">
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_interior" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Deep Interior Detail</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_stain_removal" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Stain Removal</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_odor_removal" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Odor Removal</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" name="service_other" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
+                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Other / Not Sure</span>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <button type="submit" class="w-full bg-gold-gradient text-black font-bold uppercase tracking-wider py-4 mt-6 hover:brightness-110 transition-all shadow-[0_0_20px_rgba(198,156,109,0.3)]">
+        Get My Quote
+    </button>
+    
+    <p class="text-center text-xs text-gray-600 mt-4">
+        By submitting this form, you agree to receive messages from VTL Autowerks regarding your quote.
+    </p>
+</form>
+
             </div>
         </div>
     </section>
