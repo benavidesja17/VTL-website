@@ -16,8 +16,6 @@
         body { font-family: 'Montserrat', sans-serif; } 
         
         /* === HERO TEXT POSITIONING === */
-        
-        /* 1. WRAPPER: Centers the text block */
         .hero-text-container {
             display: flex;
             flex-direction: column;
@@ -32,25 +30,22 @@
             pointer-events: none; 
         }
 
-        /* 2. LOGO STYLING */
         .hero-logo {
-            width: 125%;            
+            width: 125%;
             max-width: 800px;       
             height: auto;           
-            /* KEY CHANGE HERE: Negative number pulls the text up */
-            margin-top: 0px;    
+            margin-top: 0px;
             filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)); 
         }
 
-        /* 3. SUBTITLE: The text below */
         .hero-subtitle-fix {
-            font-size: 0.9em; 
+            font-size: 0.9em;
             color: #DDDDDD;
             letter-spacing: 2px;
             text-align: center;
             margin-bottom: 0; 
             text-transform: uppercase;
-            position: relative; /* Ensures it sits on top if they overlap */
+            position: relative;
             z-index: 21;
         }
 
@@ -72,7 +67,6 @@
             background: linear-gradient(to right, #C69C6D, #8B6D43);
         }
         
-        /* Smooth Scrolling */
         html { scroll-behavior: smooth; }
 
         /* Mobile Menu Transitions */
@@ -86,22 +80,15 @@
             max-height: 400px;
             opacity: 1;
         }
-                /* === GOLD PULSE ANIMATION === */
+        
+        /* === GOLD PULSE ANIMATION === */
         @keyframes goldPulse {
-            0% {
-        box-shadow: 0 0 0 0 rgba(198, 156, 109, 0.7);
-        }
-            70% {
-        box-shadow: 0 0 0 10px rgba(198, 156, 109, 0);
-        }
-            100% {
-        box-shadow: 0 0 0 0 rgba(198, 156, 109, 0);
-        }
+            0% { box-shadow: 0 0 0 0 rgba(198, 156, 109, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(198, 156, 109, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(198, 156, 109, 0); }
         }
 
-        .btn-pulse {
-         animation: goldPulse 2s infinite;
-}
+        .btn-pulse { animation: goldPulse 2s infinite; }
     </style>
 </head>
 <body class="bg-neutral-950 text-white selection:bg-[#C69C6D] selection:text-black">
@@ -144,7 +131,6 @@
         </div>
 
         <div class="hero-text-container"> 
-            
             <img src="logohero.png" alt="VTL Autowerks Logo" class="hero-logo">
             
             <h2 class="hero-subtitle-fix">
@@ -159,71 +145,168 @@
                     Our Services
                 </button>
             </div>
-
         </div> 
     </section>
 
     <div class="bg-neutral-900 border-y border-white/5 py-8 relative z-20">
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
             <div class="p-4">
-                <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Hydrophobic Protection</h3>
-                <p class="text-gray-500 text-sm">Advanced ceramic technology for extreme water beading.</p>
+                <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Lasting Protection</h3>
+                <p class="text-gray-500 text-sm">Premium sealants and ceramic coatings to shield your paint from the elements.</p>
             </div>
             <div class="p-4">
-                <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Mirror Finish</h3>
-                <p class="text-gray-500 text-sm">Multi-stage paint correction to remove swirls and scratches.</p>
+                <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Paint Perfection</h3>
+                <p class="text-gray-500 text-sm">Safe hand washing and gloss enhancement techniques to make your vehicle shine.</p>
             </div>
             <div class="p-4">
-                <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Interior Restoration</h3>
-                <p class="text-gray-500 text-sm">Deep cleaning and leather conditioning for a like-new feel.</p>
+                <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Interior Revival</h3>
+                <p class="text-gray-500 text-sm">Comprehensive cleaning and steam treatment to return your cabin to a factory-fresh feel.</p>
             </div>
         </div>
     </div>
 
     <section id="services" class="py-24 bg-neutral-950">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">OUR <span class="text-gold-gradient">EXPERTISE</span></h2>
-                <div class="h-1 w-24 bg-[#C69C6D] mx-auto"></div>
+            
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">PACKAGES & <span class="text-gold-gradient">PRICING</span></h2>
+                <div class="h-1 w-24 bg-[#C69C6D] mx-auto mb-6"></div>
+                <p class="text-gray-400">Choose your vehicle size to see accurate pricing.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2 relative overflow-hidden">
-                    <div class="mb-6 inline-block p-4 rounded-full bg-black border border-[#C69C6D]/30 group-hover:border-[#C69C6D] transition-colors">
-                        <i data-lucide="sparkles" class="text-[#C69C6D] w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Paint Correction</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">removal of swirl marks, scratches, and oxidation to reveal the true depth of your paint.</p>
-                    <ul class="space-y-2 mb-8 text-sm text-gray-500">
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Swirl Removal</li>
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Scratch Repair</li>
-                    </ul>
-                </div>
-
-                <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-[#C69C6D] text-black text-xs font-bold px-3 py-1 uppercase">Most Popular</div>
-                    <div class="mb-6 inline-block p-4 rounded-full bg-black border border-[#C69C6D]/30 group-hover:border-[#C69C6D] transition-colors">
-                        <i data-lucide="shield" class="text-[#C69C6D] w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Ceramic Coating</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Long-term protection against UV rays, bird droppings, and chemical stains. Unmatched gloss.</p>
-                    <ul class="space-y-2 mb-8 text-sm text-gray-500">
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> 3-5 Year Protection</li>
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Extreme Gloss</li>
-                    </ul>
-                </div>
-                <div class="group bg-neutral-900 p-8 border border-white/5 hover:border-[#C69C6D]/50 transition-all duration-300 hover:transform hover:-translate-y-2">
-                    <div class="mb-6 inline-block p-4 rounded-full bg-black border border-[#C69C6D]/30 group-hover:border-[#C69C6D] transition-colors">
-                        <i data-lucide="droplets" class="text-[#C69C6D] w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Full Detail</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">A comprehensive reset. Deep interior cleaning, leather conditioning, and a premium wash.</p>
-                    <ul class="space-y-2 mb-8 text-sm text-gray-500">
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Steam Cleaning</li>
-                        <li class="flex items-center"><i data-lucide="chevron-right" class="text-[#C69C6D] w-4 h-4 mr-2"></i> Leather Care</li>
-                    </ul>
+            <div class="flex justify-center mb-16">
+                <div class="inline-flex bg-neutral-900 border border-white/10 p-1 rounded-lg">
+                    <button class="pricing-tab-btn active px-6 py-2 rounded-md font-bold uppercase text-sm tracking-wider transition-all" onclick="updatePrices('sedan', this)">Sedan</button>
+                    <button class="pricing-tab-btn px-6 py-2 rounded-md font-bold uppercase text-sm tracking-wider text-gray-400 hover:text-white transition-all" onclick="updatePrices('suv', this)">Small SUV</button>
+                    <button class="pricing-tab-btn px-6 py-2 rounded-md font-bold uppercase text-sm tracking-wider text-gray-400 hover:text-white transition-all" onclick="updatePrices('truck', this)">Truck / Lg SUV</button>
                 </div>
             </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                
+                <div class="bg-neutral-900 border border-white/5 p-8 hover:border-[#C69C6D]/30 transition-all rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-2">THE REFRESH</h3>
+                    <p class="text-gray-500 text-sm mb-6 h-10">Maintenance wash for well-kept vehicles.</p>
+                    
+                    <div class="text-4xl font-bold text-[#C69C6D] mb-6">
+                        $<span class="dynamic-price" data-sedan="90" data-suv="110" data-truck="130">90</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 text-sm text-gray-400">
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Hand Wash & Dry</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Wheel Clean & Tire Shine</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Spray Wax</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Light Interior Vacuum</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Dashboard Wipe Down</li>
+                    </ul>
+
+                    <a href="#contact" class="block w-full text-center py-3 border border-white/20 text-white font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors">Book This</a>
+                </div>
+
+                <div class="bg-neutral-800 border-2 border-[#C69C6D] p-8 rounded-lg relative transform md:-translate-y-4 shadow-2xl shadow-[#C69C6D]/10">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#C69C6D] text-black text-xs font-bold px-4 py-1 uppercase tracking-widest rounded-full">Most Popular</div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-2">THE RESET</h3>
+                    <p class="text-gray-400 text-sm mb-6 h-10">Deep clean inside & out. The factory reset.</p>
+                    
+                    <div class="text-5xl font-bold text-white mb-6">
+                        $<span class="dynamic-price" data-sedan="175" data-suv="200" data-truck="250">175</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 text-sm text-gray-300 font-medium">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="text-[#C69C6D] w-5 h-5 mr-3"></i> <strong>Everything in Refresh</strong></li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="text-[#C69C6D] w-5 h-5 mr-3"></i> Deep Vacuum (Trunk incl.)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="text-[#C69C6D] w-5 h-5 mr-3"></i> <strong>Steam Cleaning</strong></li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="text-[#C69C6D] w-5 h-5 mr-3"></i> Leather Conditioning</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="text-[#C69C6D] w-5 h-5 mr-3"></i> Door Jambs & Bug Removal</li>
+                    </ul>
+
+                    <a href="#contact" class="block w-full text-center py-4 bg-[#C69C6D] text-black font-bold uppercase tracking-wider text-sm hover:brightness-110 transition-all shadow-[0_0_15px_rgba(198,156,109,0.4)]">Book This</a>
+                </div>
+
+                <div class="bg-neutral-900 border border-white/5 p-8 hover:border-[#C69C6D]/30 transition-all rounded-lg">
+                    <h3 class="text-xl font-bold text-gold-gradient mb-2">VTL SIGNATURE</h3>
+                    <p class="text-gray-500 text-sm mb-6 h-10">Restoration, gloss & 6-month protection.</p>
+                    
+                    <div class="text-4xl font-bold text-[#C69C6D] mb-6">
+                        $<span class="dynamic-price" data-sedan="240" data-suv="280" data-truck="330">240</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 text-sm text-gray-400">
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> <strong>Everything in Reset</strong></li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Clay Bar Treatment</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Iron Decontamination</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Engine Bay Detail</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> 6-Month Ceramic Sealant</li>
+                    </ul>
+
+                    <a href="#contact" class="block w-full text-center py-3 border border-white/20 text-white font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors">Book This</a>
+                </div>
+
+            </div>
+
+            <div class="mt-16 max-w-4xl mx-auto border-t border-white/10 pt-12">
+                <h3 class="text-2xl font-bold text-center mb-8">INDIVIDUAL SERVICES</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+                    <div class="bg-neutral-900 p-6 rounded border border-white/5">
+                        <h4 class="text-[#C69C6D] font-bold uppercase tracking-wider mb-2">Interior Only</h4>
+                        <div class="text-3xl font-bold text-white">$<span class="dynamic-price" data-sedan="115" data-suv="130" data-truck="165">115</span></div>
+                        <p class="text-xs text-gray-500 mt-2">Deep clean, steam, vacuum & windows.</p>
+                    </div>
+                    <div class="bg-neutral-900 p-6 rounded border border-white/5">
+                        <h4 class="text-[#C69C6D] font-bold uppercase tracking-wider mb-2">Exterior Only</h4>
+                        <div class="text-3xl font-bold text-white">$<span class="dynamic-price" data-sedan="75" data-suv="85" data-truck="100">75</span></div>
+                        <p class="text-xs text-gray-500 mt-2">Hand wash, wheels, tires & spray wax.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 bg-neutral-900 border border-[#C69C6D] rounded-xl overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-[#C69C6D] blur-[100px] opacity-10 pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-8 md:p-12 flex flex-col justify-center">
+                        <div class="inline-block bg-[#C69C6D]/10 text-[#C69C6D] font-bold px-4 py-2 rounded-full text-xs uppercase tracking-widest w-fit mb-6 border border-[#C69C6D]/20">
+                            The Ultimate Protection
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4">SYSTEM X CERAMIC COATING</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Stop waxing your car. Our professional-grade ceramic coating creates a semi-permanent bond to your paint, providing unmatched gloss and protection against bird droppings, UV rays, and scratches for up to 5 years.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center text-sm text-gray-300">
+                                <i data-lucide="shield-check" class="text-[#C69C6D] w-5 h-5 mr-3"></i> 3-5 Year Durability
+                            </div>
+                            <div class="flex items-center text-sm text-gray-300">
+                                <i data-lucide="droplets" class="text-[#C69C6D] w-5 h-5 mr-3"></i> Extreme Hydrophobics
+                            </div>
+                            <div class="flex items-center text-sm text-gray-300">
+                                <i data-lucide="sun" class="text-[#C69C6D] w-5 h-5 mr-3"></i> UV & Fade Resistance
+                            </div>
+                            <div class="flex items-center text-sm text-gray-300">
+                                <i data-lucide="gem" class="text-[#C69C6D] w-5 h-5 mr-3"></i> 9H Hardness
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4 items-center">
+                            <div class="text-3xl font-bold text-white">
+                                Starting at $850
+                            </div>
+                            <a href="#contact" class="bg-[#C69C6D] text-black font-bold uppercase tracking-wider py-3 px-8 rounded hover:brightness-110 transition-all shadow-[0_0_20px_rgba(198,156,109,0.3)]">
+                                Get A Quote
+                            </a>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4">*Includes Paint Correction prep work.</p>
+                    </div>
+
+                    <div class="relative h-64 md:h-auto">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-90" alt="Ceramic Coating Mirror Finish">
+                        <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900/50 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -448,6 +531,52 @@
 
         // Initialize Lucide icons
         lucide.createIcons();
+
+        // === NAVBAR SCROLL EFFECT LOGIC ===
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                // When scrolled down: Darker smokey glass (60% opacity + blur)
+                nav.classList.add('bg-black/80', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'shadow-lg', 'py-4');
+                nav.classList.remove('py-6');
+            } else {
+                // At the top: Transparent
+                nav.classList.remove('bg-black/80', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'shadow-lg', 'py-4');
+                nav.classList.add('py-6');
+            }
+        });
+
+        // === PRICING UPDATE LOGIC ===
+        
+        function updatePrices(vehicleType, clickedBtn) {
+            // A. Update the Prices
+            const prices = document.querySelectorAll('.dynamic-price');
+            prices.forEach(price => {
+                price.textContent = price.getAttribute('data-' + vehicleType);
+            });
+
+            // B. Update the Buttons Style
+            const buttons = document.querySelectorAll('.pricing-tab-btn');
+            
+            // Reset all buttons to "inactive" style
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-[#C69C6D]', 'text-black');
+                btn.classList.add('text-gray-400');
+            });
+
+            // Set the clicked button to "active" style
+            clickedBtn.classList.add('active', 'bg-[#C69C6D]', 'text-black');
+            clickedBtn.classList.remove('text-gray-400');
+        }
+        
+        // Run once on load to ensure Sedan style is correct
+        document.addEventListener('DOMContentLoaded', () => {
+           const sedanBtn = document.querySelector('.pricing-tab-btn.active');
+           if(sedanBtn) {
+               sedanBtn.classList.add('bg-[#C69C6D]', 'text-black');
+               sedanBtn.classList.remove('text-gray-400');
+           }
+        });
     </script>
 </body>
 </html>
