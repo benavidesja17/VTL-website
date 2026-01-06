@@ -22,12 +22,7 @@
             align-items: center;
             justify-content: center;
             position: absolute;
-            
-            /* === MOBILE SETTING: The Sweet Spot === */
-            /* 48% pushes it down so it's not floating too high, 
-               but keeps it slightly above center so buttons fit. */
             top: 48%; 
-            
             left: 50%;
             transform: translate(-50%, -50%); 
             width: 100%;
@@ -36,8 +31,6 @@
         }
 
         .hero-logo {
-            /* === MOBILE SETTING: Bigger Impact === */
-            /* Increased to 115% so the car looks powerful again */
             width: 115%;
             max-width: 800px;       
             height: auto;           
@@ -50,29 +43,21 @@
             color: #DDDDDD;
             letter-spacing: 2px;
             text-align: center;
-            
-            /* Mobile Spacing */
             margin-top: -1rem;  
             margin-bottom: 2rem; 
-            
             text-transform: uppercase;
             position: relative;
             z-index: 21;
         }
 
-        /* === DESKTOP OVERRIDES (LOCKED IN) === */
+        /* === DESKTOP OVERRIDES === */
         @media (min-width: 768px) {
-            
-            /* Keep Desktop exactly where you liked it (42%) */
             .hero-text-container {
                 top: 42%;
             }
-            
-            /* Keep Desktop Logo Huge (125%) */
             .hero-logo {
                 width: 125%; 
             }
-
             .hero-subtitle-fix {
                 font-size: 1.4em;
                 letter-spacing: 3px;
@@ -135,8 +120,8 @@
 
             <div class="hidden md:flex items-center space-x-8">
                 <button onclick="document.getElementById('services').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Services</button>
+                <button onclick="openAddonsFromMenu()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Add-Ons</button>
                 <button onclick="document.getElementById('gallery').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Gallery</button>
-                <button onclick="document.getElementById('about').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">About</button>
                 <button onclick="document.getElementById('contact').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Contact</button>
                 
                 <button onclick="document.getElementById('contact').scrollIntoView()" class="px-6 py-2 border border-[#C69C6D] text-[#C69C6D] hover:bg-[#C69C6D] hover:text-black transition-all duration-300 uppercase text-sm tracking-wider font-bold btn-pulse">
@@ -151,8 +136,8 @@
 
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-black border-t border-white/10 shadow-2xl flex flex-col items-center py-4 space-y-4 md:hidden">
             <button onclick="toggleMenu(); document.getElementById('services').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">Services</button>
+            <button onclick="toggleMenu(); openAddonsFromMenu()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">Add-Ons</button>
             <button onclick="toggleMenu(); document.getElementById('gallery').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">Gallery</button>
-            <button onclick="toggleMenu(); document.getElementById('about').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">About</button>
             <button onclick="toggleMenu(); document.getElementById('contact').scrollIntoView()" class="text-lg uppercase tracking-widest hover:text-[#C69C6D]">Contact</button>
         </div>
     </nav>
@@ -306,50 +291,123 @@
                 </div>
             </div>
 
-            <div class="mt-20 bg-neutral-900 border border-[#C69C6D] rounded-xl overflow-hidden relative">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-[#C69C6D] blur-[100px] opacity-10 pointer-events-none"></div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2">
-                    <div class="p-8 md:p-12 flex flex-col justify-center">
-                        <div class="inline-block bg-[#C69C6D]/10 text-[#C69C6D] font-bold px-4 py-2 rounded-full text-xs uppercase tracking-widest w-fit mb-6 border border-[#C69C6D]/20">
-                            The Ultimate Protection
-                        </div>
-                        <h3 class="text-3xl md:text-4xl font-bold mb-4">SYSTEM X CERAMIC COATING</h3>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            Stop waxing your car. Our professional-grade ceramic coating creates a semi-permanent bond to your paint, providing unmatched gloss and protection against bird droppings, UV rays, and scratches for up to 5 years.
-                        </p>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                            <div class="flex items-center text-sm text-gray-300">
-                                <i data-lucide="shield-check" class="text-[#C69C6D] w-5 h-5 mr-3"></i> 3-5 Year Durability
-                            </div>
-                            <div class="flex items-center text-sm text-gray-300">
-                                <i data-lucide="droplets" class="text-[#C69C6D] w-5 h-5 mr-3"></i> Extreme Hydrophobics
-                            </div>
-                            <div class="flex items-center text-sm text-gray-300">
-                                <i data-lucide="sun" class="text-[#C69C6D] w-5 h-5 mr-3"></i> UV & Fade Resistance
-                            </div>
-                            <div class="flex items-center text-sm text-gray-300">
-                                <i data-lucide="gem" class="text-[#C69C6D] w-5 h-5 mr-3"></i> 9H Hardness
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row gap-4 items-center">
-                            <div class="text-3xl font-bold text-white">
-                                Starting at $850
-                            </div>
-                            <a href="#contact" class="bg-[#C69C6D] text-black font-bold uppercase tracking-wider py-3 px-8 rounded hover:brightness-110 transition-all shadow-[0_0_20px_rgba(198,156,109,0.3)]">
-                                Get A Quote
-                            </a>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-4">*Includes Paint Correction prep work.</p>
-                    </div>
-
-                    <div class="relative h-64 md:h-auto">
-                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-90" alt="Ceramic Coating Mirror Finish">
-                        <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900/50 to-transparent"></div>
-                    </div>
+            <div class="mt-16 max-w-6xl mx-auto border-t border-white/10 pt-12">
+                
+                <div class="text-center">
+                    <button onclick="toggleAddons()" class="group flex items-center justify-center mx-auto space-x-3 bg-neutral-900 border border-[#C69C6D] px-8 py-4 rounded hover:bg-[#C69C6D] hover:text-black transition-all duration-300">
+                        <span id="addons-btn-text" class="uppercase tracking-widest font-bold text-sm">View Add-Ons & Ceramic Coating</span>
+                        <i id="addons-icon" data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-4">A La Carte services, paint correction, and protection.</p>
                 </div>
+
+                <div id="addons-container" class="max-h-0 opacity-0 overflow-hidden transition-all duration-700 ease-in-out">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 mb-16 px-2">
+                        
+                        <div class="bg-neutral-900 p-4 rounded border-l-4 border-[#C69C6D] shadow-lg flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="text-white font-bold text-sm uppercase">Paint Correction</h4>
+                                    <span class="text-[#C69C6D] font-bold text-sm">$400+</span>
+                                </div>
+                                <p class="text-xs text-gray-400 mb-2 leading-relaxed">Removes swirls & scratches.</p>
+                            </div>
+                            <a href="#contact" class="text-xs uppercase font-bold text-white border-b border-[#C69C6D] pb-1 w-fit hover:text-[#C69C6D]">Get Quote</a>
+                        </div>
+
+                        <div class="bg-neutral-900 p-4 rounded border-l-4 border-white/20 shadow-lg flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="text-white font-bold text-sm uppercase">Headlights</h4>
+                                    <span class="text-[#C69C6D] font-bold text-sm">$200</span>
+                                </div>
+                                <p class="text-xs text-gray-400 mb-2 leading-relaxed">Restoration for clarity & safety.</p>
+                            </div>
+                            <a href="#contact" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
+                        </div>
+
+                        <div class="bg-neutral-900 p-4 rounded border-l-4 border-white/20 shadow-lg flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="text-white font-bold text-sm uppercase">Seat Extraction</h4>
+                                    <span class="text-[#C69C6D] font-bold text-sm">$100+</span>
+                                </div>
+                                <p class="text-xs text-gray-400 mb-2 leading-relaxed">Hot water extraction for stains.</p>
+                            </div>
+                            <a href="#contact" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
+                        </div>
+
+                        <div class="bg-neutral-900 p-4 rounded border-l-4 border-white/20 shadow-lg flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="text-white font-bold text-sm uppercase">Engine Bay</h4>
+                                    <span class="text-[#C69C6D] font-bold text-sm">$60</span>
+                                </div>
+                                <p class="text-xs text-gray-400 mb-2 leading-relaxed">Steam clean & dress plastics.</p>
+                            </div>
+                            <a href="#contact" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
+                        </div>
+                        
+                         <div class="bg-neutral-900 p-4 rounded border-l-4 border-white/20 shadow-lg flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-1">
+                                    <h4 class="text-white font-bold text-sm uppercase">Odor Removal</h4>
+                                    <span class="text-[#C69C6D] font-bold text-sm">$30</span>
+                                </div>
+                                <p class="text-xs text-gray-400 mb-2 leading-relaxed">Ozone treatment for smells.</p>
+                            </div>
+                            <a href="#contact" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
+                        </div>
+
+                    </div>
+
+                    <div class="bg-neutral-900 border border-[#C69C6D] rounded-xl overflow-hidden relative mb-12">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-[#C69C6D] blur-[100px] opacity-10 pointer-events-none"></div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="p-8 md:p-12 flex flex-col justify-center">
+                                <div class="inline-block bg-[#C69C6D]/10 text-[#C69C6D] font-bold px-4 py-2 rounded-full text-xs uppercase tracking-widest w-fit mb-6 border border-[#C69C6D]/20">
+                                    The Ultimate Protection
+                                </div>
+                                <h3 class="text-3xl md:text-4xl font-bold mb-4">SYSTEM X CERAMIC COATING</h3>
+                                <p class="text-gray-400 mb-6 leading-relaxed">
+                                    Stop waxing your car. Our professional-grade ceramic coating creates a semi-permanent bond to your paint, providing unmatched gloss and protection against bird droppings, UV rays, and scratches for up to 5 years.
+                                </p>
+                                
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                                    <div class="flex items-center text-sm text-gray-300">
+                                        <i data-lucide="shield-check" class="text-[#C69C6D] w-5 h-5 mr-3"></i> 3-5 Year Durability
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-300">
+                                        <i data-lucide="droplets" class="text-[#C69C6D] w-5 h-5 mr-3"></i> Extreme Hydrophobics
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-300">
+                                        <i data-lucide="sun" class="text-[#C69C6D] w-5 h-5 mr-3"></i> UV & Fade Resistance
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-300">
+                                        <i data-lucide="gem" class="text-[#C69C6D] w-5 h-5 mr-3"></i> 9H Hardness
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-4 items-center">
+                                    <div class="text-3xl font-bold text-white">
+                                        Starting at $850
+                                    </div>
+                                    <a href="#contact" class="bg-[#C69C6D] text-black font-bold uppercase tracking-wider py-3 px-8 rounded hover:brightness-110 transition-all shadow-[0_0_20px_rgba(198,156,109,0.3)]">
+                                        Get A Quote
+                                    </a>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-4">*Includes Paint Correction prep work.</p>
+                            </div>
+
+                            <div class="relative h-64 md:h-auto">
+                                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-90" alt="Ceramic Coating Mirror Finish">
+                                <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900/50 to-transparent"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
             </div>
 
         </div>
@@ -367,9 +425,9 @@
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar">
                 
-                <div class="relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
+                <div class="min-w-[85vw] md:min-w-0 snap-center relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
                     <img src="images/durango-srt.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Dodge Durango SRT Detail">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-[#C69C6D] text-xs font-bold uppercase tracking-wider mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Paint Correction</span>
@@ -377,7 +435,7 @@
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
+                <div class="min-w-[85vw] md:min-w-0 snap-center relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
                     <img src="images/tan-interior.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Luxury Interior">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-[#C69C6D] text-xs font-bold uppercase tracking-wider mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Interior Detail</span>
@@ -385,7 +443,7 @@
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
+                <div class="min-w-[85vw] md:min-w-0 snap-center relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
                     <img src="images/red-challenger.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Challenger Detail">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-[#C69C6D] text-xs font-bold uppercase tracking-wider mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Exterior Detail</span>
@@ -393,7 +451,7 @@
                     </div>
                 </div>
                 
-                <div class="relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
+                <div class="min-w-[85vw] md:min-w-0 snap-center relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
                     <img src="images/brown-interior.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Truck Interior">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-[#C69C6D] text-xs font-bold uppercase tracking-wider mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Full Restoration</span>
@@ -401,7 +459,7 @@
                     </div>
                 </div>
                 
-                <div class="relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
+                <div class="min-w-[85vw] md:min-w-0 snap-center relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
                     <img src="images/lino-kia.JPEG" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Genesis Detail">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-[#C69C6D] text-xs font-bold uppercase tracking-wider mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Gloss Enhancement</span>
@@ -409,7 +467,7 @@
                     </div>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
+                <div class="min-w-[85vw] md:min-w-0 snap-center relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
                     <img src="images/clean-engine.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Engine Detail">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                         <span class="text-[#C69C6D] text-xs font-bold uppercase tracking-wider mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Deep Clean</span>
@@ -418,49 +476,19 @@
                 </div>
 
             </div>
-    </section>
 
-    <section id="about" class="py-24 bg-neutral-900 border-y border-white/5 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#C69C6D 1px, transparent 1px); background-size: 30px 30px;"></div>
-
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                
-                <div class="md:w-1/2">
-                    <div class="inline-block bg-[#C69C6D]/10 text-[#C69C6D] font-bold px-4 py-2 rounded-full text-xs uppercase tracking-widest w-fit mb-6 border border-[#C69C6D]/20">
-                        Veteran Owned & Operated
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">DISCIPLINE MEETS <br><span class="text-gold-gradient">DETAILING</span></h2>
-                    
-                    <p class="text-gray-400 leading-relaxed mb-6">
-                        VTL Autowerks is proud to be <strong>Veteran Owned and Operated</strong>. We bring the same level of discipline, integrity, and attention to detail to your vehicle that was instilled in us during service. We don't believe in "cutting corners"—only cleaning them.
-                    </p>
-                    <p class="text-gray-400 leading-relaxed mb-8">
-                        With over <strong>2 years of experience</strong> serving the Dale City community, we have refined our craft to deliver showroom-quality results. Whether it's a daily driver or a weekend toy, we treat every vehicle with obsessive care.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="border-l-2 border-[#C69C6D] pl-4">
-                            <span class="block text-2xl font-bold text-white">100%</span>
-                            <span class="text-xs text-gray-500 uppercase tracking-wider">Satisfaction</span>
-                        </div>
-                        <div class="border-l-2 border-[#C69C6D] pl-4">
-                            <span class="block text-2xl font-bold text-white">Licensed</span>
-                            <span class="text-xs text-gray-500 uppercase tracking-wider">& Insured</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:w-1/2 relative">
-                    <div class="absolute -inset-4 bg-[#C69C6D] rounded-lg opacity-20 blur-lg"></div>
-                    <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=1000&auto=format&fit=crop" 
-                         alt="Detailing Action Shot" 
-                         class="relative rounded-lg shadow-2xl border border-white/10 w-full h-auto object-cover transform transition duration-700 hover:scale-[1.02]">
-                </div>
-
+            <div class="md:hidden text-center text-gray-500 text-xs mt-2 animate-pulse">
+                Swipe for more work &rarr;
             </div>
+
+            <a href="https://www.instagram.com/vtlautowerks" target="_blank" rel="noopener noreferrer" class="block md:hidden text-[#C69C6D] hover:text-white transition-colors uppercase tracking-widest text-sm font-bold mt-8 text-center">
+                Follow us on Instagram <i data-lucide="arrow-right" class="inline w-4 h-4 ml-1"></i>
+            </a>
+
         </div>
     </section>
+
+    
 
     <section id="contact" class="py-24 bg-neutral-950 relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C69C6D] rounded-full filter blur-[120px] opacity-10 pointer-events-none"></div>
@@ -664,6 +692,38 @@
                sedanBtn.classList.remove('text-gray-400');
            }
         });
+
+        // === TOGGLE ADD-ONS LOGIC (NEW) ===
+        function toggleAddons() {
+            const container = document.getElementById('addons-container');
+            const btnText = document.getElementById('addons-btn-text');
+            const icon = document.getElementById('addons-icon');
+            
+            // Check if closed
+            if (container.classList.contains('max-h-0')) {
+                // OPEN IT
+                container.classList.remove('max-h-0', 'opacity-0');
+                container.classList.add('max-h-[3000px]', 'opacity-100'); // large max-height for ceramic section
+                btnText.innerText = "Hide Add-On Services";
+                icon.style.transform = "rotate(180deg)";
+            } else {
+                // CLOSE IT
+                container.classList.add('max-h-0', 'opacity-0');
+                container.classList.remove('max-h-[3000px]', 'opacity-100');
+                btnText.innerText = "View Add-Ons & Ceramic Coating";
+                icon.style.transform = "rotate(0deg)";
+            }
+        }
+
+        function openAddonsFromMenu() {
+            const container = document.getElementById('addons-container');
+            document.getElementById('services').scrollIntoView();
+            
+            // if closed, trigger click to open
+            if (container.classList.contains('max-h-0')) {
+                toggleAddons();
+            }
+        }
     </script>
 </body>
 </html>
