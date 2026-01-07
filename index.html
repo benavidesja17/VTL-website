@@ -124,9 +124,9 @@
                 <button onclick="document.getElementById('gallery').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Gallery</button>
                 <button onclick="document.getElementById('contact').scrollIntoView()" class="text-sm uppercase tracking-widest hover:text-[#C69C6D] transition-colors font-medium">Contact</button>
                 
-                <button onclick="document.getElementById('contact').scrollIntoView()" class="px-6 py-2 border border-[#C69C6D] text-[#C69C6D] hover:bg-[#C69C6D] hover:text-black transition-all duration-300 uppercase text-sm tracking-wider font-bold btn-pulse">
+                <a href="https://square.site/book/your-business" target="_blank" class="px-6 py-2 border border-[#C69C6D] text-[#C69C6D] hover:bg-[#C69C6D] hover:text-black transition-all duration-300 uppercase text-sm tracking-wider font-bold btn-pulse">
                     Book Now
-                </button>
+                </a>
             </div>
 
             <button class="md:hidden text-white hover:text-[#C69C6D] transition-colors" onclick="toggleMenu()">
@@ -164,11 +164,17 @@
                 AUTOMOTIVE DETAILING & PAINT PROTECTION
             </h2>
 
-            <div class="flex flex-col md:flex-row gap-4 justify-center mt-8 pointer-events-auto">
-                <button onclick="document.getElementById('contact').scrollIntoView()" class="bg-gold-gradient text-black px-8 py-4 font-bold uppercase tracking-wider hover:brightness-110 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(198,156,109,0.3)]">
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center mt-8 pointer-events-auto w-full">
+                
+                <a href="https://square.site/book/your-business" target="_blank" class="md:hidden inline-block bg-gold-gradient text-black px-8 py-4 font-bold uppercase tracking-wider hover:brightness-110 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(198,156,109,0.3)] text-center min-w-[200px]">
+                    Book Now
+                </a>
+
+                <button onclick="document.getElementById('contact').scrollIntoView()" class="hidden md:inline-block bg-gold-gradient text-black px-8 py-4 font-bold uppercase tracking-wider hover:brightness-110 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(198,156,109,0.3)] text-center min-w-[200px]">
                     Get a Quote
                 </button>
-                <button onclick="document.getElementById('services').scrollIntoView()" class="px-8 py-4 border border-white/30 hover:bg-white/10 transition-all uppercase tracking-wider font-bold backdrop-blur-sm">
+
+                <button onclick="document.getElementById('services').scrollIntoView()" class="px-8 py-4 border border-white/30 hover:bg-white/10 transition-all uppercase tracking-wider font-bold backdrop-blur-sm text-center min-w-[200px]">
                     Our Services
                 </button>
             </div>
@@ -195,13 +201,13 @@
     <section id="services" class="py-24 bg-neutral-950 overflow-hidden">
         <div class="container mx-auto px-6">
             
-            <div class="text-center mb-12">
+            <div class="text-center mb-8">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4">PACKAGES & <span class="text-gold-gradient">PRICING</span></h2>
                 <div class="h-1 w-24 bg-[#C69C6D] mx-auto mb-6"></div>
                 <p class="text-gray-400">Choose your vehicle size to see accurate pricing.</p>
             </div>
 
-            <div class="flex justify-center mb-16">
+            <div class="flex justify-center mb-6">
                 <div class="inline-flex bg-neutral-900 border border-white/10 p-1 rounded-lg">
                     <button class="pricing-tab-btn active px-6 py-2 rounded-md font-bold uppercase text-sm tracking-wider transition-all" onclick="updatePrices('sedan', this)">Sedan</button>
                     <button class="pricing-tab-btn px-6 py-2 rounded-md font-bold uppercase text-sm tracking-wider text-gray-400 hover:text-white transition-all" onclick="updatePrices('suv', this)">Small SUV</button>
@@ -209,7 +215,7 @@
                 </div>
             </div>
 
-            <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 pt-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar">
+            <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 pt-4 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 hide-scrollbar mb-4">
                 
                 <div class="min-w-[85vw] md:min-w-0 snap-center bg-neutral-900 border border-white/5 p-8 hover:border-[#C69C6D]/30 transition-all rounded-lg flex flex-col">
                     <h3 class="text-xl font-bold text-white mb-2">THE REFRESH</h3>
@@ -227,7 +233,7 @@
                         <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Dashboard Wipe Down</li>
                     </ul>
 
-                    <a href="#contact" class="block w-full text-center py-3 border border-white/20 text-white font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors">Book This</a>
+                    <a href="https://square.site/book/your-business" target="_blank" class="block w-full text-center py-3 border border-white/20 text-white font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors">Book This</a>
                 </div>
 
                 <div class="min-w-[85vw] md:min-w-0 snap-center bg-neutral-800 border-2 border-[#C69C6D] p-8 rounded-lg relative transform md:-translate-y-4 shadow-2xl shadow-[#C69C6D]/10 flex flex-col">
@@ -248,7 +254,7 @@
                         <li class="flex items-center"><i data-lucide="check-circle" class="text-[#C69C6D] w-5 h-5 mr-3"></i> Door Jambs & Bug Removal</li>
                     </ul>
 
-                    <a href="#contact" class="block w-full text-center py-4 bg-[#C69C6D] text-black font-bold uppercase tracking-wider text-sm hover:brightness-110 transition-all shadow-[0_0_15px_rgba(198,156,109,0.4)]">Book This</a>
+                    <a href="https://square.site/book/your-business" target="_blank" class="block w-full text-center py-4 bg-[#C69C6D] text-black font-bold uppercase tracking-wider text-sm hover:brightness-110 transition-all shadow-[0_0_15px_rgba(198,156,109,0.4)]">Book This</a>
                 </div>
 
                 <div class="min-w-[85vw] md:min-w-0 snap-center bg-neutral-900 border border-white/5 p-8 hover:border-[#C69C6D]/30 transition-all rounded-lg flex flex-col">
@@ -267,31 +273,30 @@
                         <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> 6-Month Ceramic Sealant</li>
                     </ul>
 
-                    <a href="#contact" class="block w-full text-center py-3 border border-white/20 text-white font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors">Book This</a>
+                    <a href="https://square.site/book/your-business" target="_blank" class="block w-full text-center py-3 border border-white/20 text-white font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors">Book This</a>
                 </div>
 
             </div>
-            <div class="md:hidden text-center text-gray-500 text-xs mt-2 animate-pulse">
+            
+            <div class="md:hidden text-center text-gray-500 text-xs mt-2 mb-4 animate-pulse">
                 Swipe for more packages &rarr;
             </div>
 
-            <div class="mt-16 max-w-4xl mx-auto border-t border-white/10 pt-12">
-                <h3 class="text-2xl font-bold text-center mb-8">INDIVIDUAL SERVICES</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-                    <div class="bg-neutral-900 p-6 rounded border border-white/5">
-                        <h4 class="text-[#C69C6D] font-bold uppercase tracking-wider mb-2">Interior Only</h4>
-                        <div class="text-3xl font-bold text-white">$<span class="dynamic-price" data-sedan="115" data-suv="130" data-truck="165">115</span></div>
-                        <p class="text-xs text-gray-500 mt-2">Deep clean, steam, vacuum & windows.</p>
+            <div class="max-w-md mx-auto mb-8">
+                <div class="flex items-center justify-center divide-x divide-white/20">
+                    <div class="px-6 text-center">
+                        <h4 class="text-[#C69C6D] font-bold uppercase tracking-wider text-[10px] md:text-xs">Interior Only</h4>
+                        <div class="text-xl font-bold text-white leading-none my-1">$<span class="dynamic-price" data-sedan="115" data-suv="130" data-truck="165">115</span></div>
+                        <p class="text-[9px] md:text-[10px] text-gray-500 leading-tight">Deep clean, steam & vac.</p>
                     </div>
-                    <div class="bg-neutral-900 p-6 rounded border border-white/5">
-                        <h4 class="text-[#C69C6D] font-bold uppercase tracking-wider mb-2">Exterior Only</h4>
-                        <div class="text-3xl font-bold text-white">$<span class="dynamic-price" data-sedan="75" data-suv="85" data-truck="100">75</span></div>
-                        <p class="text-xs text-gray-500 mt-2">Hand wash, wheels, tires & spray wax.</p>
+                    <div class="px-6 text-center">
+                        <h4 class="text-[#C69C6D] font-bold uppercase tracking-wider text-[10px] md:text-xs">Exterior Only</h4>
+                        <div class="text-xl font-bold text-white leading-none my-1">$<span class="dynamic-price" data-sedan="75" data-suv="85" data-truck="100">75</span></div>
+                        <p class="text-[9px] md:text-[10px] text-gray-500 leading-tight">Hand wash, wheels & wax.</p>
                     </div>
                 </div>
             </div>
-
-            <div class="mt-16 max-w-6xl mx-auto border-t border-white/10 pt-12">
+            <div class="mt-8 max-w-6xl mx-auto border-t border-white/10 pt-12">
                 
                 <div class="text-center">
                     <button onclick="toggleAddons()" class="group flex items-center justify-center mx-auto space-x-3 bg-neutral-900 border border-[#C69C6D] px-8 py-4 rounded hover:bg-[#C69C6D] hover:text-black transition-all duration-300">
@@ -324,7 +329,7 @@
                                 </div>
                                 <p class="text-xs text-gray-400 mb-2 leading-relaxed">Restoration for clarity & safety.</p>
                             </div>
-                            <a href="#contact" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
+                            <a href="https://square.site/book/your-business" target="_blank" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
                         </div>
 
                         <div class="bg-neutral-900 p-4 rounded border-l-4 border-white/20 shadow-lg flex flex-col justify-between">
@@ -335,7 +340,7 @@
                                 </div>
                                 <p class="text-xs text-gray-400 mb-2 leading-relaxed">Hot water extraction for stains.</p>
                             </div>
-                            <a href="#contact" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
+                            <a href="https://square.site/book/your-business" target="_blank" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
                         </div>
 
                         <div class="bg-neutral-900 p-4 rounded border-l-4 border-white/20 shadow-lg flex flex-col justify-between">
@@ -346,7 +351,7 @@
                                 </div>
                                 <p class="text-xs text-gray-400 mb-2 leading-relaxed">Steam clean & dress plastics.</p>
                             </div>
-                            <a href="#contact" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
+                            <a href="https://square.site/book/your-business" target="_blank" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
                         </div>
                         
                          <div class="bg-neutral-900 p-4 rounded border-l-4 border-white/20 shadow-lg flex flex-col justify-between">
@@ -357,7 +362,7 @@
                                 </div>
                                 <p class="text-xs text-gray-400 mb-2 leading-relaxed">Ozone treatment for smells.</p>
                             </div>
-                            <a href="#contact" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
+                            <a href="https://square.site/book/your-business" target="_blank" class="text-xs uppercase font-bold text-white border-b border-white pb-1 w-fit hover:text-[#C69C6D]">Book Now</a>
                         </div>
 
                     </div>
@@ -502,9 +507,10 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    <a href="tel:5714391855" class="flex items-center justify-center bg-white text-black font-bold py-4 uppercase tracking-wider hover:bg-gray-200 transition-colors rounded-sm">
-                        <i data-lucide="phone" class="w-5 h-5 mr-2"></i> Call Now
+                    <a href="https://square.site/book/your-business" target="_blank" class="flex items-center justify-center bg-gold-gradient text-black font-bold py-4 uppercase tracking-wider hover:brightness-110 transition-all rounded-sm shadow-[0_0_20px_rgba(198,156,109,0.3)]">
+                        <i data-lucide="calendar" class="w-5 h-5 mr-2"></i> Book Now
                     </a>
+                    
                     <a href="sms:5714391855" class="flex items-center justify-center bg-neutral-800 border border-white/20 text-white font-bold py-4 uppercase tracking-wider hover:bg-neutral-700 transition-colors rounded-sm">
                         <i data-lucide="message-square" class="w-5 h-5 mr-2"></i> Text Us
                     </a>
