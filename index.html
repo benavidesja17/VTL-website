@@ -5,10 +5,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="VTL Autowerks - Premium automotive detailing and ceramic coating in Dumfries, VA. Veteran Owned & Operated.">
+    <meta name="description" content="VTL Autowerks - Premium automotive detailing in Dumfries, VA. Veteran Owned & Operated.">
 
     <meta property="og:title" content="VTL Autowerks | Premium Auto Detailing">
-    <meta property="og:description" content="Veteran Owned. Ceramic Coating & Paint Correction in Dumfries, VA.">
+    <meta property="og:description" content="Veteran Owned. Premium Auto Detailing in Dumfries, VA.">
     <meta property="og:image" content="https://vtlautowerks.com/social-share.png">
     <meta property="og:url" content="https://vtlautowerks.com">
     <meta property="og:type" content="website">
@@ -91,7 +91,7 @@
             background: linear-gradient(to right, #C69C6D, #8B6D43);
         }
         
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 
         /* Mobile Menu Transitions */
         #mobile-menu {
@@ -176,7 +176,7 @@
             <img src="logohero.png" alt="VTL Autowerks Logo" class="hero-logo">
             
             <h2 class="hero-subtitle-fix">
-                AUTOMOTIVE DETAILING & PAINT PROTECTION
+                PREMIUM AUTOMOTIVE DETAILING
             </h2>
 
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center mt-8 pointer-events-auto w-full">
@@ -200,7 +200,7 @@
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
             <div class="p-4">
                 <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Lasting Protection</h3>
-                <p class="text-gray-500 text-sm">Premium sealants and ceramic coatings to shield your paint from the elements.</p>
+                <p class="text-gray-500 text-sm">Premium sealants and waxes to shield your paint from the elements.</p>
             </div>
             <div class="p-4">
                 <h3 class="text-[#C69C6D] font-bold text-xl mb-2">Paint Perfection</h3>
@@ -256,7 +256,7 @@
 
                 <div class="min-w-[85vw] md:min-w-0 md:w-96 shrink-0 snap-center bg-neutral-900 border border-white/5 p-8 rounded-lg flex flex-col transition-all duration-300 hover:-translate-y-4 hover:border-[#C69C6D]/30 hover:shadow-xl">
                     <h3 class="text-xl font-bold text-gold-gradient mb-2">VTL SIGNATURE</h3>
-                    <p class="text-gray-500 text-sm mb-6 h-10">Restoration, gloss & 6-month protection.</p>
+                    <p class="text-gray-500 text-sm mb-6 h-10">Deep restoration, gloss & lasting protection.</p>
                     
                     <div class="text-4xl font-bold text-[#C69C6D] mb-6">
                         $<span class="dynamic-price" data-sedan="240" data-suv="280" data-truck="330">240</span>
@@ -267,7 +267,7 @@
                         <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Clay Bar Treatment</li>
                         <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Iron Decontamination</li>
                         <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Engine Bay Detail</li>
-                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Gyeon CanCoat EVO 1 year Ceramic Coating</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-3"></i> Premium Paint Sealant (6+ Months Protection)</li>
                     </ul>
 
                     <a href="https://app.squareup.com/appointments/book/1vava9tkopti6j/L80B0Z7J4TQB0/start" target="_blank" class="block w-full text-center py-3 border border-white/20 text-white font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors">Book This</a>
@@ -297,22 +297,15 @@
                 
                 <div class="text-center">
                     <button onclick="toggleAddons()" class="group flex items-center justify-center mx-auto space-x-3 bg-neutral-900 border border-[#C69C6D] px-8 py-4 rounded hover:bg-[#C69C6D] hover:text-black transition-all duration-300">
-                        <span id="addons-btn-text" class="uppercase tracking-widest font-bold text-sm">View Add-Ons & Ceramic Coating</span>
+                        <span id="addons-btn-text" class="uppercase tracking-widest font-bold text-sm">View Add-Ons</span>
                         <i id="addons-icon" data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
                     </button>
-                    <p class="text-xs text-gray-500 mt-4">A La Carte services, paint correction, and protection.</p>
+                    <p class="text-xs text-gray-500 mt-4">A La Carte interior and exterior services.</p>
                 </div>
 
                <div id="addons-container" class="max-h-0 opacity-0 overflow-hidden transition-all duration-700 ease-in-out">
                     
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12 mb-16 px-2">
-                        
-                        <div class="bg-neutral-900 p-6 rounded border-l-4 border-[#C69C6D] shadow-lg flex flex-col justify-center hover:bg-white/5 transition-colors">
-                            <div class="mb-2">
-                                <h4 class="text-white font-bold text-sm uppercase">1-Step Polish</h4>
-                            </div>
-                            <p class="text-xs text-gray-400 leading-relaxed">Gloss enhancement. Machine polishing to remove light swirls and oxidation.</p>
-                        </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12 mb-16 px-2">
 
                         <div class="bg-neutral-900 p-6 rounded border-l-4 border-white/20 shadow-lg flex flex-col justify-center hover:bg-white/5 transition-colors">
                             <div class="mb-2">
@@ -350,62 +343,6 @@
                         </div>
 
                     </div>
-
-                    <div class="bg-neutral-900 border border-[#C69C6D] rounded-xl overflow-hidden relative mb-12">
-                        <div class="absolute top-0 right-0 w-64 h-64 bg-[#C69C6D] blur-[100px] opacity-10 pointer-events-none"></div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2">
-                            <div class="p-8 md:p-12 flex flex-col justify-center">
-                                <div class="inline-block bg-[#C69C6D]/10 text-[#C69C6D] font-bold px-4 py-2 rounded-full text-xs uppercase tracking-widest w-fit mb-4 border border-[#C69C6D]/20">
-                                    The Ultimate Protection
-                                </div>
-                                <h3 class="text-3xl md:text-4xl font-bold mb-4">SYSTEM X CERAMIC COATING</h3>
-                                <p class="text-gray-400 mb-6 text-sm leading-relaxed">
-                                    Protect your vehicle’s exterior with <strong>System X Ceramic Coating</strong>, delivering superior durability and a stunning, long-lasting finish that shields against stains, fading, and everyday wear.
-                                </p>
-                                
-                                <div class="space-y-6 mb-8">
-                                    <div>
-                                        <h4 class="text-[#C69C6D] font-bold text-xs uppercase tracking-widest mb-2">Exterior Prep & Decon</h4>
-                                        <ul class="text-sm text-gray-300 space-y-1">
-                                            <li class="flex items-start"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-2 mt-0.5"></i> Thorough hand wash + foam bath</li>
-                                            <li class="flex items-start"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-2 mt-0.5"></i> Clay bar & iron decontamination</li>
-                                            <li class="flex items-start"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-2 mt-0.5"></i> Wheels + rims deep cleaned</li>
-                                            <li class="flex items-start"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-2 mt-0.5"></i> Alcohol wipe down (Crucial for bonding)</li>
-                                        </ul>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="text-[#C69C6D] font-bold text-xs uppercase tracking-widest mb-2">Polish & Correction</h4>
-                                        <ul class="text-sm text-gray-300 space-y-1">
-                                            <li class="flex items-start"><i data-lucide="check" class="text-[#C69C6D] w-4 h-4 mr-2 mt-0.5"></i> <strong>1-step paint correction included</strong></li>
-                                            <li class="flex items-start"><i data-lucide="check" class="text-gray-500 w-4 h-4 mr-2 mt-0.5"></i> <em>Multi-stage correction available (+$)</em></li>
-                                        </ul>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="text-[#C69C6D] font-bold text-xs uppercase tracking-widest mb-2">Protection</h4>
-                                        <ul class="text-sm text-gray-300 space-y-1">
-                                            <li class="flex items-start"><i data-lucide="shield-check" class="text-[#C69C6D] w-4 h-4 mr-2 mt-0.5"></i> System X Ceramic Coating Application</li>
-                                            <li class="flex items-start"><i data-lucide="shield-check" class="text-[#C69C6D] w-4 h-4 mr-2 mt-0.5"></i> <strong>Warranty Included</strong></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4">
-                                    <div class="text-3xl font-bold text-white">
-                                        Starting at $850
-                                    </div>
-                                    <p class="text-xs text-gray-500 mt-2">Fill out the quote form below to get started.</p>
-                                </div>
-                            </div>
-
-                            <div class="relative h-64 md:h-auto">
-                                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-90" alt="Ceramic Coating Mirror Finish">
-                                <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900/50 to-transparent"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
         </div>
@@ -428,7 +365,7 @@
                 <div class="min-w-[85vw] md:min-w-0 snap-center relative group overflow-hidden rounded-xl h-80 cursor-pointer shadow-lg border border-white/5">
                     <img src="images/durango-srt.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Dodge Durango SRT Detail">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <span class="text-[#C69C6D] text-xs font-bold uppercase tracking-wider mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Paint Correction</span>
+                        <span class="text-[#C69C6D] text-xs font-bold uppercase tracking-wider mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Premium Detail</span>
                         <h3 class="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Dodge Durango SRT</h3>
                     </div>
                 </div>
@@ -519,6 +456,7 @@
                 <form name="Detail Quote-request" method="POST" data-netlify="true" action="thank_you.html" class="space-y-6 text-left">
     
     <div hidden><input name="bot-field" /></div>
+    <input type="hidden" name="subject" value="New Quote Request - VTL Autowerks" />
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-2">
@@ -556,20 +494,12 @@
                 <label class="text-xs uppercase tracking-wider text-[#C69C6D] font-bold mb-3 block border-b border-white/10 pb-2">Exterior Services (Check all that apply)</label>
                 <div class="space-y-3">
                     <label class="flex items-center space-x-3 cursor-pointer group">
-                        <input type="checkbox" name="service_ceramic_Coating" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
-                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Ceramic Coating</span>
-                    </label>
-                    <label class="flex items-center space-x-3 cursor-pointer group">
                         <input type="checkbox" name="service_wash" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
                         <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Premium Wash & Wax</span>
                     </label>
                     <label class="flex items-center space-x-3 cursor-pointer group">
                         <input type="checkbox" name="service_clay_decon" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
                         <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Clay Bar & Paint Decontamination</span>
-                    </label>
-                    <label class="flex items-center space-x-3 cursor-pointer group">
-                        <input type="checkbox" name="service_paint_correction" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
-                        <span class="text-gray-400 group-hover:text-white transition-colors text-sm">Paint Correction / Scratch Removal</span>
                     </label>
                     <label class="flex items-center space-x-3 cursor-pointer group">
                         <input type="checkbox" name="service_engine_Detail" class="form-checkbox h-5 w-5 text-[#C69C6D] rounded border-white/30 bg-black focus:ring-0 focus:ring-offset-0">
@@ -660,11 +590,9 @@
         window.addEventListener('scroll', function() {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) {
-                // When scrolled down: Darker smokey glass (80% opacity + blur)
                 nav.classList.add('bg-black/80', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'shadow-lg', 'py-4');
                 nav.classList.remove('py-6');
             } else {
-                // At the top: Transparent
                 nav.classList.remove('bg-black/80', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'shadow-lg', 'py-4');
                 nav.classList.add('py-6');
             }
@@ -702,7 +630,7 @@
            }
         });
 
-        // === TOGGLE ADD-ONS LOGIC (NEW) ===
+        // === TOGGLE ADD-ONS LOGIC ===
         function toggleAddons() {
             const container = document.getElementById('addons-container');
             const btnText = document.getElementById('addons-btn-text');
@@ -712,14 +640,14 @@
             if (container.classList.contains('max-h-0')) {
                 // OPEN IT
                 container.classList.remove('max-h-0', 'opacity-0');
-                container.classList.add('max-h-[3000px]', 'opacity-100'); // large max-height for ceramic section
+                container.classList.add('max-h-[3000px]', 'opacity-100');
                 btnText.innerText = "Hide Add-On Services";
                 icon.style.transform = "rotate(180deg)";
             } else {
                 // CLOSE IT
                 container.classList.add('max-h-0', 'opacity-0');
                 container.classList.remove('max-h-[3000px]', 'opacity-100');
-                btnText.innerText = "View Add-Ons & Ceramic Coating";
+                btnText.innerText = "View Add-Ons";
                 icon.style.transform = "rotate(0deg)";
             }
         }
@@ -736,3 +664,113 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
